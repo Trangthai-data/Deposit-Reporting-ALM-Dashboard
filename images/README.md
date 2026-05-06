@@ -1,3 +1,3 @@
 ## 📷 Dashboard Preview
 
-![Dashboard](images/DASHBOARD%20ALM.png)
+![Dashboard](DASHBOARD%20ALM.png)
