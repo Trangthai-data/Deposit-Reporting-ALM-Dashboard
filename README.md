@@ -1,6 +1,6 @@
 # 📊 Deposit Reporting & Financial Dashboard (ALM Perspective)
 
-![Dashboard Overview](images/overview-dashboard.png)
+![Dashboard](images/DASHBOARD%20ALM.png)
 
 Banking analytics project focusing on deposit reporting, funding structure analysis, Cost of Fund (COF), and ALM decision support.
 
