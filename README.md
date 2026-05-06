@@ -72,6 +72,17 @@ Dashboard (ALM Analytics)
 - Built Stored Procedures for:
   - Deposit snapshot at as-of date
   - Balance aggregation by product & customer
+  - Funding structure calculation
+  - Interest expense calculation
+
+---
+
+### SQL Techniques
+
+- CTE
+- Window Function
+- Aggregation
+- Conditional Mapping
 
 ---
 
@@ -92,6 +103,15 @@ Dashboard (ALM Analytics)
 - Customer
 - Product
 - Fact Deposit
+
+---
+
+### Power BI Development
+
+- DAX Measures
+- Scenario Simulation
+- What-if Parameters
+- Interactive Financial Dashboard
 
 ---
 
@@ -220,6 +240,7 @@ Supports decisions related to:
 - Funding strategy
 - Deposit pricing
 - Liquidity management
+- ALM optimization
 
 ---
 
@@ -241,6 +262,8 @@ Supports decisions related to:
 - Function
 - View
 - Aggregation
+- CTE
+- Window Function
 
 ---
 
@@ -250,6 +273,7 @@ Supports decisions related to:
 - DAX
 - Visualization
 - Financial Dashboard
+- What-if Simulation
 
 ---
 
