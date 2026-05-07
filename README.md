@@ -2,7 +2,7 @@
 
 ![Dashboard](images/DASHBOARD%20ALM.jpg)
 
-Banking analytics project focused on deposit reporting automation, funding structure monitoring, and ALM reporting using SQL Server and Power BI.
+Banking deposit reporting and ALM monitoring dashboard using SQL Server and Power BI.
 
 This project simulates an end-to-end banking reporting workflow, including data processing, reporting automation, data modeling, and dashboard development to support deposit monitoring and funding structure analysis.
 
