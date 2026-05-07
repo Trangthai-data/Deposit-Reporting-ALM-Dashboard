@@ -1,48 +1,46 @@
-# 📊 Deposit Reporting & Financial Dashboard (ALM Perspective)
+# 📊 Banking Deposit Reporting & Automation
 
-![Dashboard](images/DASHBOARD%20ALM.png)
+![Dashboard](images/DASHBOARD%20ALM.jpg)
 
-Banking analytics project focusing on deposit reporting, funding structure analysis, Cost of Fund (COF), and ALM decision support.
+Banking analytics project focused on deposit reporting automation, funding structure monitoring, and ALM reporting using SQL Server and Power BI.
 
-This project simulates an end-to-end banking reporting workflow, including data processing, financial data modeling, and dashboard analytics to support funding strategy and ALM management.
+This project simulates an end-to-end banking reporting workflow, including data processing, reporting automation, data modeling, and dashboard development to support deposit monitoring and funding structure analysis.
 
 ---
 
 ## 🧠 Business Problem
 
-Banks need to control funding costs (COF) and optimize Net Interest Margin (NIM) through effective deposit structure management.
+Banks require centralized reporting systems to monitor deposit balances and funding structure at the reporting date (as-of date).
 
 However:
 
-- Deposit data is fragmented across:
+- Deposit data is fragmented across multiple sources:
   - CASA
   - Savings
   - Term Deposits
-- Difficult to determine balances at a specific as-of date
-- Lack of analytical tools for:
-  - Tenor structure
-  - CASA ratio
-  - Funding structure impact on COF & NIM
+- Difficult to generate accurate balance snapshots at reporting date
+- Lack of standardized reporting and automation workflow
+- Limited visibility into funding structure and deposit trends
 
 👉 As a result:
 
-- Funding optimization decisions become difficult
-- Business impact from funding strategy changes cannot be quantified effectively
+- Manual reporting processes become time-consuming
+- Reporting consistency is reduced
+- Funding structure monitoring becomes inefficient
 
 ---
 
 ## 🎯 Objectives
 
-- Build deposit dataset at as-of date
-- Standardize data for financial analytics
-- Monitor:
+- Build deposit reporting dataset at as-of date
+- Standardize deposit data for reporting and monitoring
+- Track:
+  - Deposit Balance
   - CASA Ratio
-  - COF
   - Interest Expense
-- Simulate scenarios:
-  - CASA increase
-  - Tenor adjustment
-- Evaluate NIM impact
+  - Funding Structure by tenor
+- Automate deposit reporting workflow
+- Support ALM monitoring through reporting dashboard
 
 ---
 
@@ -54,13 +52,13 @@ TIENGUI_TIETKIEM
 TIENGUI_COKYHAN
 KHACHHANG
         ↓
-Stored Procedure (as-of date snapshot)
+Stored Procedure (As-of-date Snapshot)
         ↓
-SQL View / Function (standardization)
+SQL View / Function (Data Standardization)
         ↓
 Power BI Dataset (Star Schema)
         ↓
-Dashboard (ALM Analytics)
+Dashboard (Deposit Monitoring & Reporting)
 ```
 
 ---
@@ -69,11 +67,10 @@ Dashboard (ALM Analytics)
 
 ### SQL Server
 
-- Built Stored Procedures for:
-  - Deposit snapshot at as-of date
-  - Balance aggregation by product & customer
-  - Funding structure calculation
-  - Interest expense calculation
+- Developed Stored Procedures for:
+  - Deposit snapshot generation at reporting date
+  - Balance aggregation by customer and deposit type
+  - Deposit reporting consolidation
 
 ---
 
@@ -88,7 +85,7 @@ Dashboard (ALM Analytics)
 
 ### Data Standardization
 
-- Function & View for:
+- Built SQL Views and Functions for:
   - Deposit type mapping
   - Interest rate normalization
   - Currency standardization
@@ -99,9 +96,9 @@ Dashboard (ALM Analytics)
 
 #### Star Schema
 
-- Date
-- Customer
-- Product
+- Dim Date
+- Dim Customer
+- Dim Product
 - Fact Deposit
 
 ---
@@ -109,9 +106,9 @@ Dashboard (ALM Analytics)
 ### Power BI Development
 
 - DAX Measures
-- Scenario Simulation
-- What-if Parameters
-- Interactive Financial Dashboard
+- Interactive Dashboard
+- Deposit Monitoring
+- Funding Structure Analysis
 
 ---
 
@@ -146,14 +143,6 @@ CASA Ratio = CASA Balance / Total Deposit
 
 ---
 
-### Cost of Fund (COF)
-
-```text
-COF = Interest Expense / Average Funding Balance
-```
-
----
-
 ### Interest Expense
 
 ```text
@@ -162,60 +151,43 @@ Interest Expense = Σ(Deposit Interest Cost)
 
 ---
 
-### NIM Impact
+### Funding Structure
 
 ```text
-NIM Impact = Loan Yield - COF
+Funding Structure = Deposit Distribution by Tenor & Product Type
 ```
 
 ---
 
-## 💡 Insights & Decisions
+## 💡 Key Insights
 
-### 1. CASA remains very low (~2.9%)
+### 1. CASA ratio remained relatively low (~2.9%)
 
-👉 Heavy reliance on term deposits keeps COF elevated.
-
-#### Recommended Action
-
-- Increase CASA by 3–5% through:
-  - Transaction banking
-  - Payroll products
-  - Digital banking ecosystem
+👉 The funding structure relied heavily on term deposits.
 
 ---
 
-### 2. Short-term tenor (1–3M) dominates the portfolio (~57%)
+### 2. Short-term tenor (1–3M) accounted for the largest funding proportion (~57%)
 
-👉 Main funding source but still carries meaningful funding cost.
-
-#### Recommended Action
-
-- Optimize pricing strategy
-- Rebalance tenor allocation
+👉 Deposit structure was concentrated in short-term funding products.
 
 ---
 
-### 3. Medium-to-long tenor deposits (6–12M) contribute heavily to interest expense
+### 3. Medium and long-term deposits (6–12M) contributed significantly to interest expense
 
-#### Recommended Action
-
-- Limit aggressive long-term deposit growth
-- Shift funding mix toward short/medium tenor
+👉 Higher interest rates increased overall funding cost exposure.
 
 ---
 
-### 4. COF is highly sensitive to funding structure changes
+### 4. Funding structure changed significantly across tenor groups and deposit products
 
-👉 Funding mix should be managed as a strategic ALM lever.
+👉 Monitoring deposit mix was important for reporting and funding analysis.
 
 ---
 
-### 5. Combined scenario (higher CASA + lower long tenor) creates strongest COF optimization
+### 5. Dashboard improved visibility into deposit trends and reporting metrics
 
-#### Recommended Action
-
-- Execute multiple funding strategies simultaneously instead of isolated actions
+👉 Enabled faster monitoring of funding structure at reporting date.
 
 ---
 
@@ -223,34 +195,39 @@ NIM Impact = Loan Yield - COF
 
 ### ⏱️ Operational Efficiency
 
-- Reduced manual reporting & data processing time by ~50–70%
+- Reduced manual reporting and data consolidation effort by ~50–70%
 
 ---
 
-### 📊 Standardized ALM Dataset
+### 📊 Standardized Reporting Dataset
 
-- Improved data consistency for financial analysis
+- Improved data consistency for reporting and monitoring purposes
 
 ---
 
-### 🧠 Better Decision Support
+### 🧠 Better Monitoring Capability
 
-Supports decisions related to:
+- Increased visibility into:
+  - Deposit structure
+  - CASA ratio
+  - Funding trends
+  - Interest expense
 
-- Funding strategy
-- Deposit pricing
-- Liquidity management
-- ALM optimization
+---
+
+### 📈 Reporting Support
+
+- Supported reporting and monitoring activities for ALM analysis
 
 ---
 
 ## 🔍 Future Enhancements
 
-- Connect Loan data for full NIM calculation
-- Build loan product yield analytics
-- COF decomposition by tenor
-- Repricing gap analysis (banking ALM standard)
-- Near real-time dashboard development
+- Integrate loan data for full balance sheet reporting
+- Build NIM and yield monitoring
+- Develop COF decomposition analysis
+- Expand near real-time reporting workflow
+- Enhance reporting automation process
 
 ---
 
@@ -272,14 +249,13 @@ Supports decisions related to:
 - Data Modeling
 - DAX
 - Visualization
-- Financial Dashboard
-- What-if Simulation
+- Interactive Dashboard
 
 ---
 
 ## ✅ Key Takeaway
 
-The project demonstrates how banks can build an end-to-end ALM reporting system to analyze funding structure, optimize Cost of Fund, and support strategic financial decision-making.
+This project demonstrates how banks can build an end-to-end deposit reporting system using SQL Server and Power BI to automate reporting workflows, standardize deposit data, and support funding structure monitoring for ALM reporting.
 
 ---
 
