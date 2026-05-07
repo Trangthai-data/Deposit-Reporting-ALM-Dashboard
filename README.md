@@ -2,7 +2,7 @@
 
 ![Dashboard](images/DASHBOARD%20ALM.jpg)
 
-Banking deposit reporting and ALM monitoring dashboard using SQL Server and Power BI.
+Banking analytics project focused on deposit reporting automation, funding structure monitoring, and ALM reporting using SQL Server and Power BI.
 
 This project simulates an end-to-end banking reporting workflow, including data processing, reporting automation, data modeling, and dashboard development to support deposit monitoring and funding structure analysis.
 
@@ -22,7 +22,7 @@ However:
 - Lack of standardized reporting and automation workflow
 - Limited visibility into funding structure and deposit trends
 
-👉 As a result:
+As a result:
 
 - Manual reporting processes become time-consuming
 - Reporting consistency is reduced
@@ -54,7 +54,7 @@ KHACHHANG
         ↓
 Stored Procedure (As-of-date Snapshot)
         ↓
-SQL View / Function (Data Standardization)
+SQL Views / Functions (Data Standardization)
         ↓
 Power BI Dataset (Star Schema)
         ↓
@@ -129,7 +129,7 @@ Dashboard (Deposit Monitoring & Reporting)
 
 ### Total Deposit
 
-```text
+```sql
 Total Deposit = Total Funding Balance
 ```
 
@@ -137,7 +137,7 @@ Total Deposit = Total Funding Balance
 
 ### CASA Ratio
 
-```text
+```sql
 CASA Ratio = CASA Balance / Total Deposit
 ```
 
@@ -145,7 +145,7 @@ CASA Ratio = CASA Balance / Total Deposit
 
 ### Interest Expense
 
-```text
+```sql
 Interest Expense = Σ(Deposit Interest Cost)
 ```
 
@@ -153,7 +153,7 @@ Interest Expense = Σ(Deposit Interest Cost)
 
 ### Funding Structure
 
-```text
+```sql
 Funding Structure = Deposit Distribution by Tenor & Product Type
 ```
 
@@ -163,61 +163,40 @@ Funding Structure = Deposit Distribution by Tenor & Product Type
 
 ### 1. CASA ratio remained relatively low (~2.9%)
 
-👉 The funding structure relied heavily on term deposits.
+The funding structure relied heavily on term deposits.
 
 ---
 
 ### 2. Short-term tenor (1–3M) accounted for the largest funding proportion (~57%)
 
-👉 Deposit structure was concentrated in short-term funding products.
+Deposit structure was concentrated in short-term funding products.
 
 ---
 
 ### 3. Medium and long-term deposits (6–12M) contributed significantly to interest expense
 
-👉 Higher interest rates increased overall funding cost exposure.
+Higher interest rates increased overall funding cost exposure.
 
 ---
 
 ### 4. Funding structure changed significantly across tenor groups and deposit products
 
-👉 Monitoring deposit mix was important for reporting and funding analysis.
+Monitoring deposit mix was important for reporting and funding analysis.
 
 ---
 
-### 5. Dashboard improved visibility into deposit trends and reporting metrics
+### 5. Dashboard supported monitoring of deposit trends and reporting metrics
 
-👉 Enabled faster monitoring of funding structure at reporting date.
+Enabled faster monitoring of funding structure at reporting date.
 
 ---
 
 ## 🚀 Business Impact
 
-### ⏱️ Operational Efficiency
-
 - Reduced manual reporting and data consolidation effort by ~50–70%
-
----
-
-### 📊 Standardized Reporting Dataset
-
-- Improved data consistency for reporting and monitoring purposes
-
----
-
-### 🧠 Better Monitoring Capability
-
-- Increased visibility into:
-  - Deposit structure
-  - CASA ratio
-  - Funding trends
-  - Interest expense
-
----
-
-### 📈 Reporting Support
-
-- Supported reporting and monitoring activities for ALM analysis
+- Helped standardize reporting data for monitoring purposes
+- Increased visibility into deposit structure, CASA ratio, and funding trends
+- Supported reporting and monitoring activities related to funding structure analysis
 
 ---
 
@@ -238,11 +217,8 @@ Funding Structure = Deposit Distribution by Tenor & Product Type
 - Stored Procedure
 - Function
 - View
-- Aggregation
 - CTE
 - Window Function
-
----
 
 ### Power BI
 
@@ -255,7 +231,7 @@ Funding Structure = Deposit Distribution by Tenor & Product Type
 
 ## ✅ Key Takeaway
 
-This project demonstrates how banks can build an end-to-end deposit reporting system using SQL Server and Power BI to automate reporting workflows, standardize deposit data, and support funding structure monitoring for ALM reporting.
+The project illustrates how SQL Server and Power BI can be used to automate deposit reporting workflows and support funding structure monitoring in banking.
 
 ---
 
@@ -263,4 +239,4 @@ This project demonstrates how banks can build an end-to-end deposit reporting sy
 
 **Trang Thai**
 
-- GitHub: https://github.com/Trangthai-data
+GitHub: https://github.com/Trangthai-data
